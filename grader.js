@@ -103,12 +103,12 @@ if(require.main == module) {
 
     var checkJson;
     if(program.url) {
-	checkURL(program.url, program.checks);
+	   checkURL(program.url, program.checks);
     }
     else {
-	var checkJson = checkHtmlFile(program.file, program.checks);
-	var outJson = JSON.stringify(checkJson, null, 4);
-	console.log(outJson);
+    	var checkJson = checkHtmlFile(program.file, program.checks);
+    	var outJson = JSON.stringify(checkJson, null, 4);
+    	console.log(outJson);
     }
 } else {
     exports.checkHtmlFile = checkHtmlFile;
